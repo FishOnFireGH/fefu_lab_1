@@ -7,4 +7,7 @@ urlpatterns = [
     path('student/<int:student_id>/', views.student_profile, name='student_profile'),
     path('course/<slug:course_slug>/', views.course_detail, name='course_detail'),
     path('contacts/', views.ContactsView.as_view(), name='contacts'),
+    #Добавили в лабе 2
+    path('feedback/', views.feedback_view, name='feedback'),
+    path('register/', views.register_view, name='register'),
 ]

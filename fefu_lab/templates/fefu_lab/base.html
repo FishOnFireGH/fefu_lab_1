@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEFU Lab - {% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'fefu_lab/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>FEFU Laboratory</h1>
+            <nav class="navigation">
+                <a href="/">Главная</a> | 
+                <a href="/about/">О нас</a> | 
+                <a href="/feedback/">Обратная связь</a> | 
+                <a href="/register/">Регистрация</a> |
+                <a href="/student/1/">Пример студента</a> |
+                <a href="/course/python-basics/">Курс Python</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <h2>{% block heading %}{% endblock %}</h2>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 ДВФУ. Лабораторная работа по Django.</p>
+        </footer>
+    </div>
+</body>
+</html>

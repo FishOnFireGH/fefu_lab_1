@@ -1,0 +1,41 @@
+{% extends "fefu_lab/base.html" %}
+
+{% block title %}Регистрация{% endblock %}
+{% block heading %}Регистрация нового пользователя{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <form method="post">
+        {% csrf_token %}
+        
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}
+                    <div class="error">
+                        {% for error in field.errors %}
+                            <div>{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</div>
+
+<div style="margin-top: 20px; text-align: center;">
+    <p>Уже есть аккаунт? <a href="/feedback/">Свяжитесь с нами</a> для восстановления доступа.</p>
+</div>
+
+<div class="student-info" style="margin-top: 30px;">
+    <h4>Требования к регистрации:</h4>
+    <ul>
+        <li>Логин: минимум 3 символа, уникальный</li>
+        <li>Email: действительный адрес, уникальный</li>
+        <li>Пароль: минимум 8 символов, заглавные и строчные буквы, цифры</li>
+    </ul>
+</div>
+{% endblock %}

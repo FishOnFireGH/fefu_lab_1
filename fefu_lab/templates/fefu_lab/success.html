@@ -1,0 +1,20 @@
+{% extends "fefu_lab/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block heading %}{{ heading }}{% endblock %}
+
+{% block content %}
+<div class="success-message" style="text-align: center;">
+    <h3 style="color: #27ae60;">✅ Успешно!</h3>
+    <p style="font-size: 18px; margin: 20px 0;">{{ message }}</p>
+    
+    <div style="margin-top: 30px;">
+        <a href="/" class="form-control" style="text-align: center; background: #3498db; color: white; text-decoration: none; display: inline-block; width: auto; padding: 10px 20px; margin: 5px;">
+            На главную
+        </a>
+        <a href="/feedback/" class="form-control" style="text-align: center; background: #27ae60; color: white; text-decoration: none; display: inline-block; width: auto; padding: 10px 20px; margin: 5px;">
+            Обратная связь
+        </a>
+    </div>
+</div>
+{% endblock %}

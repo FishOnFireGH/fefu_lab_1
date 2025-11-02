@@ -1,0 +1,23 @@
+{% extends "fefu_lab/base.html" %}
+
+{% block title %}Главная страница{% endblock %}
+{% block heading %}Добро пожаловать в FEFU Lab!{% endblock %}
+
+{% block content %}
+<div class="success-message">
+    <p>Это главная страница нашего учебного проекта на Django.</p>
+    <p>Используйте навигацию для перехода по разделам сайта.</p>
+</div>
+
+<div style="margin-top: 30px; text-align: center;">
+    <h3>Быстрые ссылки:</h3>
+    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 15px;">
+        <a href="/feedback/" class="form-control" style="text-align: center; background: #3498db; color: white; text-decoration: none;">
+            Обратная связь
+        </a>
+        <a href="/register/" class="form-control" style="text-align: center; background: #27ae60; color: white; text-decoration: none;">
+            Регистрация
+        </a>
+    </div>
+</div>
+{% endblock %}
